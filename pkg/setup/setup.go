@@ -64,9 +64,9 @@ func EnsureEnvironment(storePath string) error {
 
 	// Ensure we have devfs inside the container to get dynamic loop
 	// loop devices inside the container.
-	if err := util.RunCmdSync("mount", "-t", "devtmpfs", "devtmpfs", "/dev"); err != nil {
-		return err
-	}
+	//if err := util.RunCmdSync("mount", "-t", "devtmpfs", "devtmpfs", "/dev"); err != nil {
+	//	return err
+	//}
 
 	// Create a bind mount into our target location; we can't copy it because
 	// again we have to perserve the SELinux label.

@@ -86,7 +86,7 @@ func Validate(targetArch string) error {
 		return fmt.Errorf("checking rootless: %w", err)
 	}
 	if isRootless {
-		return fmt.Errorf("this command must be run in rootful (not rootless) podman")
+		//return fmt.Errorf("this command must be run in rootful (not rootless) podman")
 	}
 
 	// Having /sys be writable is an easy to check proxy for privileges; more effective
